@@ -58,8 +58,8 @@
         }
     },
     "sensors": {
-        "NoCpt": {
-            "name": "NoCpt",
+        "emeterid": {
+            "name": "electric meter Id",
             "incremental" : false,
             "data_type": "DT_String",
             "conversion": "",
@@ -72,8 +72,8 @@
                 "round_value": 0
             }
         },
-        "Isousc": {
-            "name": "Isousc",
+        "isub": {
+            "name": "current subscribed",
             "incremental" : false,
             "data_type": "DT_Current",
             "conversion": "",
@@ -86,7 +86,7 @@
                 "round_value": 0
             }
         },
-        "Imax": {
+        "imax": {
             "name": "Imax",
             "incremental" : false,
             "data_type": "DT_Current",
@@ -100,8 +100,8 @@
                 "round_value": 0
             }
         },
-        "Iinst": {
-            "name": "Iinst",
+        "iinst": {
+            "name": "instantaneous current",
             "incremental" : false,
             "data_type": "DT_Current",
             "conversion": "",
@@ -114,8 +114,8 @@
                 "round_value": 0
             }
         },
-        "Base": {
-            "name": "Base",
+        "consumption": {
+            "name": "energy consumption",
             "incremental" : false,
             "data_type": "DT_ActiveEnergy",
             "conversion": "",
@@ -128,8 +128,8 @@
                 "round_value": 0
             }
         },
-        "H_Creuses": {
-            "name": "H_Creuses",
+        "offhoursconsumption": {
+            "name": "off hours energy consumption",
             "incremental" : false,
             "data_type": "DT_ActiveEnergy",
             "conversion": "",
@@ -142,8 +142,8 @@
                 "round_value": 0
             }
         },
-        "H_Pleines": {
-            "name": "H_Pleines",
+        "peakhoursconsumption": {
+            "name": "peak hours energy consumption",
             "incremental" : false,
             "data_type": "DT_ActiveEnergy",
             "conversion": "",
@@ -156,8 +156,8 @@
                 "round_value": 0
             }
         },
-        "plage_horaire": {
-            "name": "plage_horaire",
+        "timeslot": {
+            "name": "timeslot",
             "incremental" : false,
             "data_type": "DT_String",
             "conversion": "",
@@ -350,42 +350,42 @@
                     {
                         "key": "adco",
                         "ignore_values": "",
-                        "sensor": "NoCpt"
+                        "sensor": "emeterid"
                     },
                     {
                         "key": "isousc",
                         "ignore_values": "",
-                        "sensor": "Isousc"
+                        "sensor": "isub"
                     },
                     {
                         "key": "base",
                         "ignore_values": "",
-                        "sensor": "Base"
+                        "sensor": "consumption"
                     },
                     {
                         "key": "imax",
                         "ignore_values": "",
-                        "sensor": "Imax"
+                        "sensor": "imax"
                     },
                     {
                         "key": "iinst",
                         "ignore_values": "",
-                        "sensor": "Iinst"
+                        "sensor": "iinst"
                     },
                     {
                         "key": "hchc",
                         "ignore_values": "",
-                        "sensor": "H_Creuses"
+                        "sensor": "offhoursconsumption"
                     },
                     {
                         "key": "hchp",
                         "ignore_values": "",
-                        "sensor": "H_Pleines"
+                        "sensor": "peakhoursconsumption"
                     },
                     {
                         "key": "ptec",
                         "ignore_values": "",
-                        "sensor": "plage_horaire"
+                        "sensor": "timeslot"
                     }
                 ]
             }
@@ -570,9 +570,9 @@
         "generic.teleinfo": {
             "description": "teleinfo", 
             "id": "generic.teleinfo", 
-            "name": "Compteur Electrique",
+            "name": "Electric Meter",
             "commands": [],
-            "sensors": ["NoCpt","Isousc","Base","Imax","Iinst","H_Creuses","H_Pleines","plage_horaire"],
+            "sensors": ["emeterid","isub","consumption","imax","iinst","offhoursconsumption","peakhoursconsumption","timeslot"],
             "parameters": []
         },
         "generic.temperature": {
