@@ -58,6 +58,118 @@
         }
     },
     "sensors": {
+        "NoCpt": {
+            "name": "NoCpt",
+            "incremental" : false,
+            "data_type": "DT_String",
+            "conversion": "",
+            "timeout" : 600,
+            "history": {
+                "store": false,
+                "duplicate" : false,
+                "max": 0,
+                "expire": 0,
+                "round_value": 0
+            }
+        },
+        "Isousc": {
+            "name": "Isousc",
+            "incremental" : false,
+            "data_type": "DT_Current",
+            "conversion": "",
+            "timeout" : 600,
+            "history": {
+                "store": false,
+                "duplicate" : false,
+                "max": 0,
+                "expire": 0,
+                "round_value": 0
+            }
+        },
+        "Imax": {
+            "name": "Imax",
+            "incremental" : false,
+            "data_type": "DT_Current",
+            "conversion": "",
+            "timeout" : 600,
+            "history": {
+                "store": false,
+                "duplicate" : false,
+                "max": 0,
+                "expire": 0,
+                "round_value": 0
+            }
+        },
+        "Iinst": {
+            "name": "Iinst",
+            "incremental" : false,
+            "data_type": "DT_Current",
+            "conversion": "",
+            "timeout" : 600,
+            "history": {
+                "store": true,
+                "duplicate" : false,
+                "max": 0,
+                "expire": 0,
+                "round_value": 0
+            }
+        },
+        "Base": {
+            "name": "Base",
+            "incremental" : false,
+            "data_type": "DT_ActiveEnergy",
+            "conversion": "",
+            "timeout" : 600,
+            "history": {
+                "store": true,
+                "duplicate" : false,
+                "max": 0,
+                "expire": 0,
+                "round_value": 0
+            }
+        },
+        "H_Creuses": {
+            "name": "H_Creuses",
+            "incremental" : false,
+            "data_type": "DT_ActiveEnergy",
+            "conversion": "",
+            "timeout" : 600,
+            "history": {
+                "store": true,
+                "duplicate" : false,
+                "max": 0,
+                "expire": 0,
+                "round_value": 0
+            }
+        },
+        "H_Pleines": {
+            "name": "H_Pleines",
+            "incremental" : false,
+            "data_type": "DT_ActiveEnergy",
+            "conversion": "",
+            "timeout" : 600,
+            "history": {
+                "store": true,
+                "duplicate" : false,
+                "max": 0,
+                "expire": 0,
+                "round_value": 0
+            }
+        },
+        "plage_horaire": {
+            "name": "plage_horaire",
+            "incremental" : false,
+            "data_type": "DT_String",
+            "conversion": "",
+            "timeout" : 600,
+            "history": {
+                "store": false,
+                "duplicate" : false,
+                "max": 0,
+                "expire": 0,
+                "round_value": 0
+            }
+        },
         "temperature": {
             "name": "Temperature",
             "incremental" : false,
@@ -228,6 +340,56 @@
         }
     },
     "xpl_stats": {
+       "teleinfo": {
+            "name": "teleinfo",
+            "schema": "teleinfo.basic",
+            "parameters": {
+                "static": [],
+                "device": [],
+                "dynamic": [
+                    {
+                        "key": "adco",
+                        "ignore_values": "",
+                        "sensor": "NoCpt"
+                    },
+                    {
+                        "key": "isousc",
+                        "ignore_values": "",
+                        "sensor": "Isousc"
+                    },
+                    {
+                        "key": "base",
+                        "ignore_values": "",
+                        "sensor": "Base"
+                    },
+                    {
+                        "key": "imax",
+                        "ignore_values": "",
+                        "sensor": "Imax"
+                    },
+                    {
+                        "key": "iinst",
+                        "ignore_values": "",
+                        "sensor": "Iinst"
+                    },
+                    {
+                        "key": "hchc",
+                        "ignore_values": "",
+                        "sensor": "H_Creuses"
+                    },
+                    {
+                        "key": "hchp",
+                        "ignore_values": "",
+                        "sensor": "H_Pleines"
+                    },
+                    {
+                        "key": "optarif",
+                        "ignore_values": "",
+                        "sensor": "plage_horaire"
+                    }
+                ]
+            }
+       },
        "temperature": {
             "name": "Temperature",
             "schema": "sensor.basic",
@@ -405,6 +567,14 @@
         }
     },
     "device_types": {
+        "generic.teleinfo": {
+            "description": "teleinfo", 
+            "id": "generic.teleinfo", 
+            "name": "Compteur Electrique",
+            "commands": [],
+            "sensors": ["NoCpt","Isousc","Base","Imax","Iinst","H_Creuses","H_Pleines","plage_horaire"],
+            "parameters": []
+        },
         "generic.temperature": {
             "description": "Temperature", 
             "id": "generic.temperature", 
