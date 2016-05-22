@@ -343,7 +343,7 @@
             "incremental" : false,
             "data_type": "DT_String",
             "conversion": "",
-            "timeout" : 600,
+            "timeout" : 0,
             "history": {
                 "store": true,
                 "duplicate" : false,
@@ -357,7 +357,7 @@
             "incremental" : false,
             "data_type": "DT_Current",
             "conversion": "",
-            "timeout" : 600,
+            "timeout" : 0,
             "history": {
                 "store": true,
                 "duplicate" : false,
@@ -371,7 +371,7 @@
             "incremental" : false,
             "data_type": "DT_Current",
             "conversion": "",
-            "timeout" : 600,
+            "timeout" : 0,
             "history": {
                 "store": true,
                 "duplicate" : false,
@@ -385,7 +385,7 @@
             "incremental" : false,
             "data_type": "DT_Current",
             "conversion": "",
-            "timeout" : 600,
+            "timeout" : 0,
             "history": {
                 "store": true,
                 "duplicate" : false,
@@ -399,7 +399,7 @@
             "incremental" : false,
             "data_type": "DT_ActiveEnergy",
             "conversion": "",
-            "timeout" : 600,
+            "timeout" : 0,
             "history": {
                 "store": true,
                 "duplicate" : false,
@@ -413,7 +413,7 @@
             "incremental" : false,
             "data_type": "DT_ActiveEnergy",
             "conversion": "",
-            "timeout" : 600,
+            "timeout" : 0,
             "history": {
                 "store": true,
                 "duplicate" : false,
@@ -427,7 +427,7 @@
             "incremental" : false,
             "data_type": "DT_ActiveEnergy",
             "conversion": "",
-            "timeout" : 600,
+            "timeout" : 0,
             "history": {
                 "store": true,
                 "duplicate" : false,
@@ -441,9 +441,9 @@
             "incremental" : false,
             "data_type": "DT_String",
             "conversion": "",
-            "timeout" : 600,
+            "timeout" : 0,
             "history": {
-                "store": false,
+                "store": true,
                 "duplicate" : false,
                 "max": 0,
                 "expire": 0,
